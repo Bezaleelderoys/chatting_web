@@ -6,50 +6,48 @@
 }
 
 body {
-  width: 100%;
-  height: 100vh;
   background-color: #eee;
+  margin: 0;
+  padding: 0;
 }
 
-.content{
+.content {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 4em;
 }
 
-.login-box{
+.login-box {
   background-color: white;
   width: 450px;
   height: 500px;
-  margin-top: 2rem;
+  margin-top: 4rem;
   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
   border-radius: 20px;
 }
 
-.text-box{
+.text-box {
   margin: 2.3rem;
 }
 
-.text-box h1{
+.text-box h1 {
   text-align: center;
   font-size: 45px;
 }
 
-
-input[type='text']{
+input[type="text"] {
   width: 100%;
 }
 
-input[type='password']{
+input[type="password"] {
   width: 100%;
 }
 
-input[type='email']{
+input[type="email"] {
   width: 100%;
 }
 
-input[type='submit']{
+input[type="submit"] {
   width: 100%;
   margin-top: 20px;
   color: white;
@@ -60,13 +58,13 @@ input[type='submit']{
   cursor: pointer;
 }
 
-input[type='submit']:hover{
+input[type="submit"]:hover {
   background-color: lightblue;
   color: black;
   transition: 0.5s;
 }
 
-.top-bar{
+.top-bar {
   background-color: lightblue;
   width: 70%;
   position: fixed;
@@ -75,41 +73,86 @@ input[type='submit']:hover{
   right: 0;
 }
 
-.user-info{
+.user-info {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   float: left;
+  max-height: 4em;
 }
 
-.user-info img{
+.user-info img {
   width: 63px;
   height: 50px;
+  margin: auto;
 }
 
-.image-box{
+.image-box {
+  margin-left: 1em;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
-  margin: 5px 10px 0 10px;
 }
 
-.text-box{
+.text-box {
   margin: 0;
-  margin: 5px 10px 0 10px;
+  margin: 1rem 1.7rem;
 }
 
-.text-box p{ 
-  display: flex; 
-  flex-direction: column; 
-  margin: 0; 
-  padding: 0; 
+.text-box p {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
 }
 
-.side-bard{
+.sidebar {
+  margin: 0;
   width: 30%;
   height: 100%;
-  background-color: green;
+  position: fixed;
+  background-color: rgb(225, 224, 224);
+  padding: 1rem;
+}
+
+.sidebar input[type="search"] {
+  width: 85%;
+  height: 2.6rem;
+  padding: 1em;
+  border: none;
+  border-radius: 1em;
+}
+
+.contact-list {
+  margin-top: 1em;
+}
+
+.contact {
+  width: 100%;
+  overflow: hidden;
+  height: 4rem;
+  cursor: pointer;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact:hover {
+  opacity: 0.9;
+}
+
+.pesan {
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+}
+
+.contact img {
+  width: 63px;
+  height: 50px;
+  margin: auto;
 }
