@@ -17,6 +17,7 @@
           <small>Last seen 12:00</small>
         </div>
       </div>
+      <a href="login.html"><button>Log-out</button></a>
     </div>
     <div class="sidebar">
       <input
@@ -25,34 +26,44 @@
         id=""
         placeholder="Search for Contacts"
       />
-      <select>
-        <option>Setting</option>
-        <option><a href="login.html">LogOut</a></option>
-        <option></option>
-      </select>
+      <!-- <ul>
+          =
+          <li><a href="">Settings</a></li>
+          <li><a href="login.html">Log-Out</a></li>
+        </ul> -->
       <div class="contact-list">
         <div class="contact">
-          <img src="img/kumar.jpg" alt="" />
+          <div class="msg-img-box">
+            <img src="img/kumar.jpg" alt="" />
+          </div>
           <div class="pesan">
-            <h2>Rajit Kumar</h2>
+            <h4>Rajit Kumar</h4>
             <p>Hey How are you?</p>
           </div>
+          <small style="top: 0">12:00</small>
         </div>
       </div>
     </div>
-    <div class="content">
-      <div class="chat-box">
-        <div class="chat-date"></div>
-        <div class="message-box">
-          <img src="img/kumar.jpg" />
-          <h4>Rajit Kumar</h4>
-          <p>Hey How are you? <small>12:00</small></p>
+    <div class="chat-box">
+      <div class="message-box">
+        <div class="chat-date">
+          <p>25/10/2023</p>
         </div>
-        <div class="message-input-box">
-          <a href=""><i>Icon</i></a>
-          <input type="text" name="message" id="" placeholder="Type here" />
-          <a href="#"><i>Send</i></a>
+        <div class="message">
+          <div class="msg-img-box">
+            <img src="img/kumar.jpg" alt="" />
+          </div>
+          <div class="msg-text-box">
+            <p>Rajit Kumar</p>
+            <p class="bubble">
+              Hey How are you? <small class="time">12:00</small>
+            </p>
+          </div>
         </div>
+      </div>
+      <div class="message-input-box">
+        <input type="text" name="message" id="" placeholder="Type here" />
+        <input type="submit" value="Send" />
       </div>
     </div>
     <script src="src/script.js"></script>
