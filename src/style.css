@@ -59,14 +59,15 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: lightblue;
-  color: black;
-  transition: 0.5s;
+  background-color: white;
+  color: blue;
+  transition: 0.2s;
+  border: 1px solid blue;
 }
 
 .top-bar {
-  background-color: lightblue;
-  width: 70%;
+  background-color: rgb(86, 86, 249);
+  width: 75%;
   position: fixed;
   height: 4em;
   top: 0;
@@ -82,18 +83,37 @@ input[type="submit"]:hover {
   max-height: 4em;
 }
 
-.user-info img {
-  width: 63px;
-  height: 50px;
-  margin: auto;
-}
-
 .image-box {
   margin-left: 1em;
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
+}
+
+.top-bar a button {
+  float: right;
+  margin: 1.2em 2em;
+  width: 8%;
+  height: 2rem;
+  color: blue;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.top-bar a button:hover {
+  background-color: rgb(86, 86, 249);
+  color: white;
+  transition: 0.2s;
+  border: 1px solid white;
+}
+
+.image-box img {
+  width: 63px;
+  height: 50px;
+  margin: auto;
 }
 
 .text-box {
@@ -110,19 +130,20 @@ input[type="submit"]:hover {
 
 .sidebar {
   margin: 0;
-  width: 30%;
+  width: 25%;
   height: 100%;
   position: fixed;
-  background-color: rgb(225, 224, 224);
+  background-color: white;
   padding: 1rem;
 }
 
 .sidebar input[type="search"] {
-  width: 85%;
+  width: 100%;
   height: 2.6rem;
   padding: 1em;
   border: none;
   border-radius: 1em;
+  background-color: #eee;
 }
 
 .contact-list {
@@ -131,17 +152,22 @@ input[type="submit"]:hover {
 
 .contact {
   width: 100%;
-  overflow: hidden;
   height: 4rem;
   cursor: pointer;
-  max-width: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
 .contact:hover {
-  opacity: 0.9;
+  background-color: #eee;
+  transition: 0.1s;
+}
+
+.contact:active {
+  background-color: #eee;
 }
 
 .pesan {
@@ -149,10 +175,149 @@ input[type="submit"]:hover {
   margin: 0;
   padding: 0;
   flex-direction: column;
+  margin: 0 1.8em;
 }
 
 .contact img {
   width: 63px;
   height: 50px;
   margin: auto;
+}
+/* .nav {
+  display: flex;
+}
+
+.sidebar ul {
+  cursor: pointer;
+  list-style: none;
+  border-radius: 5px;
+  width: 5%;
+  margin: 0;
+}
+
+.sidebar ul li {
+  background-color: #eee;
+  width: 4.7em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: none;
+}
+
+.sidebar ul:hover li {
+  background-color: #eee;
+  width: 4.7em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  display: block;
+} */
+
+/* 
+chat box starts here */
+
+.chat-box {
+  width: 75%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 4em;
+  height: 100%;
+}
+
+.message-box {
+  overflow: auto;
+  height: 80%;
+  position: fixed;
+  width: 100%;
+}
+
+.msg-img-box {
+  margin-left: 1em;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.msg-img-box img {
+  width: 63px;
+  height: 50px;
+  margin: auto;
+}
+
+.msg-text-box p {
+  padding: 0;
+  margin: 0;
+  margin-left: 1em;
+}
+
+.msg-text-box .bubble {
+  background-color: rgb(190, 231, 227);
+  width: 100%;
+  height: 2em;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.chat-date {
+  text-align: center;
+  width: 70%;
+  height: 2.6em;
+}
+
+.chat-date,
+.message {
+  display: flex;
+}
+
+.chat-date p {
+  background-color: lightblue;
+  border-radius: 5px;
+  margin: auto;
+  width: 20%;
+}
+
+/* input box starts here  */
+
+.message-input-box {
+  height: 10%;
+  width: 75%;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  padding: 1rem;
+  background-color: rgb(154, 146, 146);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-input-box input[type="text"] {
+  width: 80%;
+  height: 2.3rem;
+  border-radius: 10px;
+  border: none;
+  padding: 1em;
+  font-size: 1em;
+}
+
+.message-input-box input[type="submit"] {
+  width: 10%;
+  background: red;
+  margin: 0;
+  margin-left: 10px;
+  height: 2.3rem;
+  border-radius: 10px;
+  background-color: blue;
+}
+
+.message-input-box input[type="submit"]:hover {
+  opacity: 0.6;
+  transform: 0.001s;
+  color: white;
 }
