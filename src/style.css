@@ -67,11 +67,12 @@ input[type="submit"]:hover {
 
 .top-bar {
   background-color: rgb(86, 86, 249);
-  width: 75%;
+  width: 70%;
   position: fixed;
   height: 4em;
   top: 0;
   right: 0;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .user-info {
@@ -126,16 +127,21 @@ input[type="submit"]:hover {
   flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+.top-bar .text-box {
   color: white;
 }
 
 .sidebar {
   margin: 0;
-  width: 25%;
+  width: 30%;
   height: 100%;
   position: fixed;
   background-color: white;
   padding: 1rem;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+  overflow: auto;
 }
 
 .sidebar input[type="search"] {
@@ -149,6 +155,7 @@ input[type="submit"]:hover {
 
 .contact-list {
   margin-top: 1em;
+  overflow: auto;
 }
 
 .contact {
@@ -221,18 +228,43 @@ input[type="submit"]:hover {
 /* 
 chat box starts here */
 
+.message-box {
+  width: 100%;
+}
+
 .chat-box {
-  width: 75%;
+  width: 70%;
   position: fixed;
   top: 0;
   right: 0;
   margin-top: 4em;
   height: 100%;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.message {
+  display: flex;
+  width: 70%;
+  align-items: center;
+}
+
+.ingoing-msg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ingoing-msg .msg-text-box {
+  margin-left: 1em;
+}
+
+#outgoing {
+  justify-content: flex-end;
 }
 
 .message-box {
   overflow: auto;
-  height: 80%;
+  height: 70%;
   position: fixed;
   width: 100%;
 }
@@ -251,10 +283,6 @@ chat box starts here */
   margin: auto;
 }
 
-.msg-text-box{
-  display: flex;
-}
-
 .msg-text-box p {
   padding: 0;
   margin: 0;
@@ -267,9 +295,10 @@ chat box starts here */
   width: 100%;
   height: 3em;
   padding: 6px;
-  border-radius: 18px 18px 18px 0 ;
+  border-radius: 18px 18px 18px 0;
   color: black;
-  margin-bottom: 2em;
+  margin: 1em 0;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .msg-text-box .outgoing {
@@ -278,10 +307,14 @@ chat box starts here */
   width: 100%;
   height: 3em;
   padding: 6px;
-  border-radius: 18px 18px 0 18px ;
+  border-radius: 18px 18px 0 18px;
   color: white;
-  justify-content: flex-start;
-  margin-bottom: 2em;
+  margin: 1em 0;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#outgoing-box {
+  margin-right: 1em;
 }
 
 .chat-date {
@@ -306,7 +339,7 @@ chat box starts here */
 
 .message-input-box {
   height: 10%;
-  width: 75%;
+  width: 70%;
   bottom: 0;
   right: 0;
   position: fixed;
@@ -318,7 +351,7 @@ chat box starts here */
 }
 
 .message-input-box input[type="text"] {
-  width: 80%;
+  width: 70%;
   height: 2.3rem;
   border-radius: 10px;
   border: none;
@@ -328,7 +361,6 @@ chat box starts here */
 
 .message-input-box input[type="submit"] {
   width: 10%;
-  background: red;
   margin: 0;
   margin-left: 10px;
   height: 2.3rem;
@@ -337,7 +369,8 @@ chat box starts here */
 }
 
 .message-input-box input[type="submit"]:hover {
-  opacity: 0.6;
-  transform: 0.001s;
-  color: white;
+  transition: 0.2s;
+  color: blue;
+  background-color: white;
+  border: 1px solid blue;
 }
